@@ -2,7 +2,7 @@
 * @Author: Shenpeng
 * @Date:   2017-04-11 16:41:58
  * @Last Modified by: shenpeng
- * @Last Modified time: 2018-04-15 10:40:49
+ * @Last Modified time: 2018-04-15 10:53:34
 */
 
 var main = {
@@ -16,6 +16,8 @@ var main = {
             let gridValues = document.querySelectorAll('.grid'),
                 valueArr = [],
                 checkRole = document.querySelector('.checkRole').value;
+
+            //验证棋盘完整性
             for (let i = 0; i < gridValues.length; i++) {
                 if (gridValues[i].value.trim()) {
                     valueArr.push(gridValues[i].value);
@@ -23,13 +25,19 @@ var main = {
                     alert('请输入完整棋盘'); return;
                 }
             }
+
+            //验证是否输入角色
             if (!checkRole.trim()){
                 alert('请输入验证角色');return;
             }
-            main.chessBoard = [];
+
+            //初始化棋盘二维数组
             for (let i = 0; i < valueArr.length; i+=3) {
                 main.chessBoard.push(valueArr.slice(i,i+3));
             }
+
+            //验证可能赢的点
+            main.chessBoard = [];
             if (main.winsCheck(checkRole, main.chessBoard) == 1) {
                 console.log(main.winPoints);
                 return main.winPoints;
