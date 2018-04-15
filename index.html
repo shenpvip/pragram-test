@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>井字棋</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            width: 300px;
+            margin: 100px auto;
+        }
+        h2{
+            margin-bottom: 30px;
+        }
+        .chess-board{
+            width: 192px;
+            height: 192px;
+            overflow: hidden;
+        }
+        .grid{
+            float: left;
+            width: 60px;
+            height: 60px;
+            font-size: 32px;
+            text-align: center;
+            margin-right: -1px;
+            margin-bottom: -1px;
+        }
+        .checkRole{
+            width: 94px;
+            height: 28px;
+            margin-top: 30px;
+            padding: 0 15px;
+        }
+        .confirmBtn{
+            width: 60px;
+            height: 32px;
+        }
+        #result{
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h2>请填入棋子</h2>
+        <div class="chess-board">
+            <input class="grid" type="text" maxlength="1">
+            <input class="grid" type="text" maxlength="1">
+            <input class="grid" type="text" maxlength="1">
+            <input class="grid" type="text" maxlength="1">
+            <input class="grid" type="text" maxlength="1">
+            <input class="grid" type="text" maxlength="1">
+            <input class="grid" type="text" maxlength="1">
+            <input class="grid" type="text" maxlength="1">
+            <input class="grid" type="text" maxlength="1">
+        </div>
+        <input type="text" maxlength="1" class="checkRole" placeholder="输入角色">
+        <input class="confirmBtn" type="button" value="确认">
+        <div id="result">请在控制台查看结果</div>
+    </div>
+    <script type="text/javascript" src="./dist/index.js"></script>
+</body>
+</html>
