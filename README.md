@@ -1,4 +1,4 @@
-## pragram-tes
+## pragram-test
 
 npm install 安装依赖
 
