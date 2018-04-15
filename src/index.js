@@ -2,14 +2,14 @@
 * @Author: Shenpeng
 * @Date:   2017-04-11 16:41:58
  * @Last Modified by: shenpeng
- * @Last Modified time: 2018-04-15 10:18:44
+ * @Last Modified time: 2018-04-15 10:40:49
 */
 
 var main = {
     chessBoard:[],  //棋盘点
     winPoints:[],   //可以获胜的点
     /**
-     * 初始化棋盘数组
+     * 初始化
      */
     dataInit(){
         document.querySelector('.confirmBtn').onclick = ()=> {
@@ -93,7 +93,7 @@ var main = {
                         }
                     }
                 }
-
+                
                 // 检查 / 反斜向
                 if ((x == 0 && y == 2) || (x == 1 && y == 1) || (x == 2 && y == 0)) {
                     if (arr[0][2] != 'e' && arr[0][2] == role && arr[0][2] == arr[1][1] && arr[0][2] == arr[2][0]) {
