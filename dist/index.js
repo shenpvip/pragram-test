@@ -4,14 +4,14 @@
 * @Author: Shenpeng
 * @Date:   2017-04-11 16:41:58
  * @Last Modified by: shenpeng
- * @Last Modified time: 2018-04-15 10:18:44
+ * @Last Modified time: 2018-04-15 10:40:49
 */
 
 var main = {
     chessBoard: [], //棋盘点
     winPoints: [], //可以获胜的点
     /**
-     * 初始化棋盘数组
+     * 初始化
      */
     dataInit: function dataInit() {
         document.querySelector('.confirmBtn').onclick = function () {
